@@ -1,4 +1,21 @@
+@import './variables'
+
 .header
   width: 100vw
   height: 70px
+  display: flex
+  justify-content: space-around
 
+.navigation_elements
+  display: flex
+  align-items: center
+  height: 100%
+  list-style: none
+  font-weight: 600
+
+.navigation_element
+  margin-right: 61px
+  cursor: pointer
+  transition: all 0.2s
+  &:hover
+    color: $main-blue
