@@ -12,8 +12,8 @@ const Navigation = () => {
     const isActive = (href) => router.pathname === href ? styles.active : ''
     return (
         <header className={styles.header}>
-            <figure className={styles.logo}>
-              <Image src={logo} alt="Logo firmy Admir" />
+            <figure>
+              <Image src={logo}  alt="Admir company logo" />
             </figure>
             <nav>
                 <ul className={styles.navigation_elements}>
