@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from "../Navigation/Navigation";
+import Header from "../Header/Header";
 import Head from "next/head";
 import Footer from "../Footer/Footer";
 
@@ -16,7 +16,7 @@ const Layout = ({children}) => {
                 <meta name="robots" content="index, follow /" />
                 <meta name="language" content="Polish" />
             </Head>
-            <Navigation />
+            <Header />
             {children}
             <Footer />
         </>
