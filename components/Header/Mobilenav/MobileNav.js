@@ -1,5 +1,4 @@
-import menuImg from '../../../assets/menu-regular-24.png'
-import xImg from '../../../assets/x-regular-24.png'
+
 
 import styles from './mobileNav.module.sass'
 import {useState} from "react";
@@ -16,8 +15,9 @@ const MobileNav = () => {
                     <BiX color='white' width="30" height="30"/>
                 }
             </button>
-            <nav>
-            </nav>
+
+            { navIsActive && <div className={styles.backgorundDraver}  onClick={() => setNavIsActive((prev => !prev))}></div> }
+            { navIsActive && <nav className={styles.menu}> </nav> }
         </div>
 
     )
