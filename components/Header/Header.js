@@ -2,10 +2,6 @@ import React, {useEffect, useState} from 'react';
 import styles from '../../styles/navigation.module.sass'
 import logo from '../../assets/logo.png'
 import Image from "next/image";
-import {useRouter} from "next/router";
-import navigationLinksData from "../../assets/navigationLinksData.json"
-import NavLink from "./Navigation /NavLink";
-import useWindowSize from "../../helpers/useWindowSize";
 import Navigation from "./Navigation /Navigation";
 import MobileNav from "./Mobilenav/MobileNav";
 
@@ -22,7 +18,7 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <figure>
+            <figure className={styles.logo}>
               <Image src={logo}  alt="Admir company logo" />
             </figure>
 

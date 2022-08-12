@@ -1,15 +1,15 @@
 @import './variables'
 
 .header
+
   width: 100vw
   height: 70px
   display: flex
-  margin-top: 20px
+  padding-top: 20px
   justify-content: space-around
-  //align-content: center
 
 .logo
-  min-width: 300px
+  width: 300px
 
 .navigation_elements
   margin: 0
@@ -54,7 +54,6 @@
 
 @media screen and (max-width: 1100px)
   .logo
-    min-width: 200px
     width: 250px
 
   .navigation_elements
@@ -63,3 +62,9 @@
 @media screen and (max-width: 768px)
   .navigation_elements
     font-size: 14px
+  .logo
+    width: 160px
+
+  .header
+    justify-content: space-between
+    padding: 15px 15px 0 15px
