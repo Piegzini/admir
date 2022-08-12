@@ -1,0 +1,72 @@
+@import '../../../styles/variables'
+
+
+.hamburger
+  color: $main-blue
+  background-color: $main-blue
+  border: 0
+  border-radius: 3px
+  width: 44px
+  height: 32px
+  font-size: 26px
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0px 1px 0px 0px rgba(66, 68, 90, 0.20)
+
+
+.backgorund_draver
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0)
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  transition: all 0.4s
+
+  &.active
+    visibility: visible
+    background-color: rgba(0, 0, 0, 0.20)
+
+
+.menu
+  width: 45vw
+  height: 100vh
+  z-index: 1
+  background-color: $white
+  box-shadow: -7px 0px 24px 0px rgba(66, 68, 90, 0.25)
+
+  transition: all 0.4s
+
+  position: fixed
+  top: 0
+  right: calc(0px - 45vh)
+
+  &.active
+    right: 0
+
+
+.navigation_elements
+  width: 100%
+  height: 100%
+  padding: 20px
+
+.navigation_element
+  list-style: none
+  padding: 9px 6px
+  font-size: 16px
+  color: $shadow-gray
+  transition: all 0.3s
+
+  &.active
+    border-left: 3px solid $main-blue
+
+
+  a
+    text-decoration: none
+    color: $shadow-gray
+    text-transform: capitalize
+
+
+
