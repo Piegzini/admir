@@ -16,8 +16,8 @@ const MobileNav = () => {
                 }
             </button>
 
-            { navIsActive && <div className={styles.backgorundDraver}  onClick={() => setNavIsActive((prev => !prev))}></div> }
-            { navIsActive && <nav className={styles.menu}> </nav> }
+            <div className={`${styles.backgorundDraver} ${navIsActive ? styles.active : ''}`}  onClick={() => setNavIsActive((prev => !prev))}></div>
+            <nav className={`${styles.menu} ${navIsActive ? styles.active : ''}`}> </nav>
         </div>
 
     )

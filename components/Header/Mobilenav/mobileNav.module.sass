@@ -18,19 +18,30 @@
 .backgorundDraver
   width: 100vw
   height: 100vh
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: rgba(0, 0, 0, 0)
+  visibility: hidden
   position: fixed
   top: 0
   left: 0
+  transition: all 0.4s
+
+  &.active
+    visibility: visible
+    background-color: rgba(0, 0, 0, 0.20)
+
 
 .menu
-  width: 40vw
+  width: 45vw
   height: 100vh
   z-index: 1
-  box-shadow: -7px 0px 24px 0px rgba(66, 68, 90, 0.2)
+  background-color: $white
+  box-shadow: -7px 0px 24px 0px rgba(66, 68, 90, 0.25)
 
+  transition: all 0.4s
 
   position: fixed
   top: 0
-  right: 0
-  background-color: $white
+  right: calc(0px - 45vh)
+
+  &.active
+    right: 0
