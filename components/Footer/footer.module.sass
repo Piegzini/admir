@@ -1,4 +1,4 @@
-@import 'variables.sass'
+@import 'styles/variables'
 
 .footer
     @include flex(column)
@@ -6,6 +6,7 @@
     height: 200px
 
     p
+        margin: 5px 0 0 0
         color: $shadow-gray
         font-size: 14px
 
@@ -18,3 +19,8 @@
     padding: 0.5em
     width: 70%
 
+
+@media screen and (max-width: 768px)
+    .footer
+        p
+            font-size: 10px

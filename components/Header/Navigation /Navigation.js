@@ -3,7 +3,6 @@ import navigationLinksData from "../../../assets/navigationLinksData.json";
 import NavLink from "./NavLink";
 import React from "react";
 import {useRouter} from "next/router";
-
 const Navigation = () => {
     const router = useRouter()
     const isActive = (href) => router.pathname === href ? styles.active : ''
