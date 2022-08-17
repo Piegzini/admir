@@ -10,17 +10,22 @@
         color: $shadow-gray
         font-size: 14px
 
+.image
+    height: 30px
 
 .partners
     @include flex(row)
-    gap: 30px
+    gap: 60px
 
     border-bottom: 1px solid $grey
-    padding: 0.5em
-    width: 70%
+    padding: 0.5em 1.2em
+    width: 50%
 
 
 @media screen and (max-width: 768px)
     .footer
         p
             font-size: 10px
+    .partners
+        gap: 30px
+        width: 80%
