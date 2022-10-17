@@ -1,43 +1,49 @@
-
-
-import styles from './mobileNav.module.sass'
+import {
+    active,
+    backgroundDimmer,
+    menu,
+    navigation,
+    navigation_element,
+    navigation_elements,
+    toggleButton
+} from './mobileNav.module.sass';
 import React, {useState} from "react";
-import { BiMenu , BiX} from "react-icons/bi";
-
+import {BiMenu, BiX} from "react-icons/bi";
 import navigationLinksData from "../../../assets/navigationLinksData.json";
 import NavLink from "../Navigation /NavLink";
+import cn from "classnames";
 import {useRouter} from "next/router";
 
 const MobileNav = () => {
-    const [navIsActive, setNavIsActive] = useState(false)
+    const [isNavigationActive, setNavIsActive] = useState(false);
+    const router = useRouter();
 
-    const router = useRouter()
-    const isActive = (href) => router.pathname === href ? styles.active : ''
+    const isActive = href => router.pathname === href ? active : '';
 
     return (
-        <div>
-            <button className={styles.hamburger} onClick={() => setNavIsActive((prev => !prev))}>
-                {!navIsActive ?
+        <div className={navigation}>
+            <button type="button" className={toggleButton} onClick={() => setNavIsActive((prev => !prev))}>
+                {!isNavigationActive ?
                     <BiMenu color='white' width="30" height="30"/> :
                     <BiX color='white' width="30" height="30"/>
                 }
             </button>
 
-            <div className={`${styles.backgorund_draver} ${navIsActive ? styles.active : ''}`}  onClick={() => setNavIsActive((prev => !prev))}></div>
-
-            <nav className={`${styles.menu} ${navIsActive ? styles.active : ''}`}>
-                <ul className={styles.navigation_elements}>
-                    {navigationLinksData.map( ({title, href}) =>
-                        (<li key={title} className={`${styles.navigation_element} ${isActive(href)}`}>
-                            <NavLink href={href} title={title.toLowerCase()} />
+            <nav className={cn(menu, {[active]: isNavigationActive})}>
+                <ul className={navigation_elements}>
+                    {navigationLinksData.map(({title, href}) =>
+                        (<li key={title} className={`${navigation_element} ${isActive(href)}`}>
+                            <NavLink href={href} title={title.toLowerCase()}/>
                         </li>)
                     )}
                 </ul>
-
             </nav>
+
+            {isNavigationActive && <div className={backgroundDimmer} onClick={() => setNavIsActive((prev => !prev))}/>}
+
         </div>
 
-    )
-}
+    );
+};
 
-export default MobileNav
+export default MobileNav;

@@ -1,33 +1,28 @@
 @import '../../../styles/variables'
 
+.navigation
+  & .toggleButton
+    color: $main-blue
+    background-color: $main-blue
+    border: 0
+    border-radius: 3px
+    width: 44px
+    height: 32px
+    font-size: 26px
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0px 1px 0px 0px rgba(66, 68, 90, 0.20)
 
-.hamburger
-  color: $main-blue
-  background-color: $main-blue
-  border: 0
-  border-radius: 3px
-  width: 44px
-  height: 32px
-  font-size: 26px
-  display: flex
-  align-items: center
-  justify-content: center
-  box-shadow: 0px 1px 0px 0px rgba(66, 68, 90, 0.20)
 
-
-.backgorund_draver
+.backgroundDimmer
   width: 100vw
   height: 100vh
-  background-color: rgba(0, 0, 0, 0)
-  visibility: hidden
+  background-color: rgba(0, 0, 0, 0.20)
   position: fixed
   top: 0
   left: 0
   transition: all 0.4s
-
-  &.active
-    visibility: visible
-    background-color: rgba(0, 0, 0, 0.20)
 
 
 .menu
